@@ -1,0 +1,26 @@
+﻿@using Niqash.Resources
+
+<footer class="text-center">
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-sm-6">
+                &copy; @DateTime.Now.Year - @ViewsResource.appName
+            </div>
+
+            <div class="col-sm-6">
+                <div class="dropup">
+                    <button class="dropdown-toggle" type="button" id="langugesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="glyphicon glyphicon-globe fa-2x"></i>
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="langugesMenu">
+                        <li>@Html.ActionLink("عربي", "ChangeLanguge", "Home", new { lang = "ar-EG", returnUrl = Request.Url }, null)</li>
+                        <li>@Html.ActionLink("English", "ChangeLanguge", "Home", new { lang = "en-AU", returnUrl = Request.Url }, null)</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</footer>
+

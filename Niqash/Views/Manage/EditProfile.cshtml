@@ -1,0 +1,63 @@
+﻿@using Niqash.Resources
+
+@model Niqash.Models.EditProfileModel
+@{
+    ViewBag.Title = ViewsResource.editProfile;
+}
+
+@Html.Partial("_ManageNav")
+
+<div class="editProfile">
+
+    <div class="intro text-center">
+        <p class="lead">@ViewsResource.editProfileIntro</p>
+
+        <div class="succesMsg customHide">
+            <div class="alert alert-success">
+                <p>
+                    <strong>@ViewsResource.success</strong>
+                    @ViewsResource.successEditProfileMsg
+                </p>
+            </div>
+        </div>
+        <div class="erorrMsg customHide">
+            <div class="alert alert-danger">
+                <p>
+                    <strong>@ViewsResource.erorr</strong>
+                    @ViewsResource.erorrMsg
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <form action="/Manage/EditProfile" method="post" id="editProfileForm">
+        <div class="form-group">
+            @Html.LabelFor(m => m.FirstName, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control siteInput" })
+            @Html.ValidationMessageFor(m => m.FirstName)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.LastName, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.LastName, new { @class = "form-control siteInput" })
+            @Html.ValidationMessageFor(m => m.LastName)
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.AboutMe, new { @class = "control-label" })
+            @Html.TextAreaFor(m => m.AboutMe, new { @class = "siteInput", placeholder = ViewsResource.aboutMePlaceholder })
+            @Html.ValidationMessageFor(m => m.AboutMe)
+        </div>
+
+        <div class="form-group text-center">
+            @Html.AntiForgeryToken()
+            <input type="submit" class="siteBtn" value="@ViewsResource.save" />
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/editProfileCalls")
+}

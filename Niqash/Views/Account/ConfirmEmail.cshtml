@@ -1,0 +1,18 @@
+﻿@using Niqash.Resources
+
+@{
+    ViewBag.Title = ViewsResource.confirmEmail;
+}
+
+<div class="confirmEmail text-center">
+    <h2>@ViewBag.Title</h2>
+
+    <i class="glyphicon glyphicon-thumbs-up"
+       style="
+                font-size: 125px;
+                width:  100%;"></i>
+
+    <p class="lead">
+        @ViewsResource.confirmEmailMsg @Html.ActionLink(ViewsResource.login, "Login", "Account", routeValues: null, htmlAttributes: new { id = "loginLink" })
+    </p>
+</div>

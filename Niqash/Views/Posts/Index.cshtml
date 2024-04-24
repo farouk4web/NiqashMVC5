@@ -1,0 +1,15 @@
+﻿@using Niqash.Resources
+@model Niqash.ViewModels.PostsVm
+@{
+    ViewBag.Title = ViewsResource.posts;
+}
+
+<div class="posts" data-posts-type="globe">
+    @Html.Partial("_PostsForms")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/postsCalls")
+    @Scripts.Render("~/bundles/postCalls")
+}

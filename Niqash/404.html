@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html dir="ltr">
+<head>
+    <meta charset="utf-8" />
+    <title>Not Found</title>
+    <style>
+        * {
+            box-sizing: border-box
+        }
+
+        body {
+            margin: 0;
+        }
+
+        .container {
+            width: 90%;
+            margin:auto;
+        }
+
+        .notFound {
+            background-color: #109a75;
+            text-align:center;
+            padding-top:100px;
+            height: 100vh;
+        }
+        .notFound h2 {
+            margin: 0;
+            font-size: 50px;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .notFound p {
+            padding: 50px 0 0;
+            margin: 0;
+            font-size:25px;
+            color: #ddd
+        }
+
+        .notFound a {
+            color: #109a75;
+            background-color:#fff;
+            border-radius:10px;
+            font-size: 30px;
+            padding: 10px 15px;
+            text-decoration:none;
+        }
+    </style>
+</head>
+<body>
+    <div class="notFound">
+        <div class="container">
+            <h2 class="title">Not Found</h2>
+            <h2>404</h2>
+            <p>
+                back to <a href="/Home/Index">Home page</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="Scripts/jquery-3.3.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var height = $(window).innerHeight();
+            console.log(height);
+            
+            var texts = { title: "Not Found", pargraph: "back to", linkText: "Home Page" };
+           
+            // return page Direction if user chossen arabic language
+            var siteLanguage = document.cookie.replace(/(?:(?:^|.*;\s*)Language\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+            if (siteLanguage === "ar-EG") {
+                texts = { title: "الصفحة غير موجودة", pargraph: "عد إلي ", linkText: "الصفحة الرئيسية" };
+            }
+
+            $(".notFound").css("minHeight", height);
+
+            $(".notFound .container").html(`
+                <div>
+                    <h2 class="title">${texts.title}</h2>
+                    <h2>404</h2>
+                    <p>
+                        ${texts.pargraph} <a href="/Home/Index">${texts.linkText}</a>
+                    </p>
+                <div>
+            `);
+
+        });
+    </script>
+</body>
+</html>
+

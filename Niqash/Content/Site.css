@@ -1,0 +1,871 @@
+﻿:root {
+    /*--mainColor: #E61056;*/
+    --mainColor: #109a75;
+    --dangerColor: #E61056;
+    --bgColor: #1B2131;
+    --bgColor2: #273048;
+    --fontColor: #ddd;
+    --fontColor2: #747A89;
+    --linkColor: deepskyblue;
+    --postBg: #1f2535;
+}
+
+@font-face {
+    font-family: 'cairo';
+    src: url('/fonts/Cairo-VariableFont_wght.ttf');
+}
+
+body {
+    font-family: cairo;
+    background-color: var(--bgColor);
+    color: #fff;
+}
+
+img {
+    object-fit: cover;
+}
+
+a,
+a:hover,
+a:focus {
+    color: var(--linkColor);
+}
+
+.ad {
+    background: var(--bgColor2);
+    padding: 20px 10px;
+    min-height: 200px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* start default site styles */
+.siteBtn {
+    background-color: var(--mainColor);
+    border: 0;
+    border-radius: 8px;
+    color: #fff;
+    font-size: 14px;
+    height: 35px;
+    text-align: center;
+    min-width: 150px;
+    padding: 0 12px;
+}
+
+@media (max-width: 767px) {
+    .siteBtn {
+        min-width: 65px;
+    }
+}
+
+.siteBtn:hover,
+.siteBtn:focus {
+    color: #fff;
+}
+
+button.closeBtn {
+    background-color: #fff;
+    color: var(--bgColor)
+}
+
+    button.closeBtn:hover {
+        color: var(--bgColor)
+    }
+
+.siteInput {
+    background-color: var(--bgColor2);
+    border: 0;
+    border-radius: 8px;
+    color: var(--fontColor);
+    font-size: 18px;
+    padding: 5px 10px;
+    width: 100%;
+}
+
+@media (max-width: 767px) {
+    .siteInput {
+        font-size: 14px;
+        padding: 5px;
+    }
+}
+
+form textarea {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    max-height: 150px;
+}
+
+.customHide {
+    display: none;
+}
+
+.overflow {
+    overflow: auto;
+}
+
+i.glyphicon {
+    cursor: pointer;
+}
+/* start botstrap modal */
+.modal-content {
+    color: #fff;
+    background-color: var(--bgColor);
+}
+
+.modal-header {
+    border-bottom: 1px solid var(--mainColor);
+}
+
+.modal-title.remove {
+    color: var(--mainColor);
+}
+
+.modal-header .close {
+    color: #fff;
+    opacity: 1;
+}
+
+.modal-footer {
+    border-top: 1px solid var(--mainColor);
+}
+
+    .modal-footer #confirmRemovePost {
+        background-color: #d9534f
+    }
+/* end botstrap modal */
+
+/* end default site styles */
+/* start framworks changes */
+.field-validation-error {
+    color: var(--dangerColor);
+}
+
+.input-validation-error {
+    border: 2px solid var(--dangerColor);
+}
+/* end framworks changes */
+/* start navbar main colors */
+.navbar {
+    margin-bottom: 0
+}
+
+.navbar-inverse {
+    background-color: var(--bgColor);
+    border-color: var(--mainColor);
+}
+
+    .navbar-inverse .navbar-nav > li > a {
+        font-size: 15px;
+        color: #fff;
+    }
+
+        .navbar-inverse .navbar-nav > li > a:hover,
+        .navbar-inverse .navbar-nav > li > a:focus {
+            background-color: var(--mainColor);
+        }
+
+@media (max-width: 767px) {
+
+    .navbar-nav {
+        margin: auto;
+        text-align: center;
+    }
+
+    .navbar .navbar-collapse {
+        margin: auto;
+    }
+
+    .navbar .nav > li {
+        display: inline-block;
+    }
+}
+/* start brand */
+.navbar-toggle {
+    border: none;
+    padding: 0;
+    margin: 4px 16px 4px 0;
+}
+.navbar .navbar-brand {
+    font-size: 22px;
+    color: #fff;
+}
+.navbar .navbar-brand:first-letter {
+    color: var(--mainColor);
+    font-size: 33px;
+    font-weight: bold;
+}
+/* end brand */
+/* start user image */
+.navbar .user_account_link a {
+    margin: 0;
+    padding: 4px 10px;
+}
+
+.navbar-inverse .navbar-nav > li.user_account_link > a:hover,
+.navbar-inverse .navbar-nav > li.user_account_link > a:focus {
+    background-color: var(--bgColor2);
+}
+.navbar .navUserimg {
+    min-height: 40px;
+    max-height: 40px;
+    min-width: 40px;
+    max-width: 40px;
+}
+@media (min-width: 767px) {
+    .navbar .navUserName {
+        display: inline-block;
+        margin: 0 10px;
+        font-weight: bold;
+        text-transform: capitalize;
+    }
+}
+.navbar .user_account_link .navUserName {
+    font-size: 14px;
+    color: var(--linkColor);
+}
+
+/* end user image */
+
+/* end navbar main colors */
+
+/* start search */
+.searchSection {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,1);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10001;
+}
+
+    .searchSection .closeIcon {
+        display: inline-block;
+        padding: 0 21px;
+        font-size: 25px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        background-color: red;
+    }
+
+    .searchSection form {
+        padding: 20vh 0 20px;
+        width: 90%;
+        margin: auto;
+    }
+
+    .searchSection .siteInput {
+        margin: 0 0 20px;
+        font-size: 20px;
+        height: 45px;
+        padding: 20px;
+    }
+
+    .searchSection button {
+        margin: 0 auto 20px
+    }
+
+@media (max-width: 992px) {
+}
+/* end search */
+/* start footer */
+footer {
+    padding: 20px;
+    margin-top: 50px;
+    border-top: 1px solid var(--mainColor);
+}
+
+    footer .dropdown-menu {
+        left: 25%;
+    }
+
+    footer button {
+        color: #fff;
+        background: none;
+        border: none;
+        font-size: 18px;
+    }
+/* end footer */
+
+/* star about site page */
+.about {
+}
+
+.about p {
+    color: #ddd;
+}
+.about .siteStatistics {
+    margin-top: 80px;
+}
+.about .siteStatistics h2 {
+    font-size: 33px;
+    margin-bottom: 40px;
+}
+
+.about .siteStatistics i {
+    font-size: 50px;
+}
+
+.about .siteStatistics h3 {
+    margin-bottom: 25px;
+    border-bottom: 3px dashed #eee;
+    padding-bottom: 25px;
+}
+
+/* end about site page */
+
+
+
+
+
+
+
+
+
+
+/* start posts main page */
+/* start post and comments form */
+#postForm {
+    border-bottom: 2px solid var(--bgColor2);
+}
+
+    #postForm textarea {
+        min-width: 100%;
+        max-width: 100%;
+        min-height: 70px;
+        max-height: 70px;
+        transition: .7s ease
+    }
+
+        #postForm textarea.active {
+            min-height: 150px;
+            max-height: 150px;
+        }
+
+.posts .commentForm {
+    padding-top: 5px;
+}
+
+    .posts .commentForm textarea {
+        min-height: 50px;
+        max-height: 50px;
+        font-size: 14px;
+    }
+
+/* end post form */
+
+/* start no posts alert msg */
+.noPostsMsg {
+    margin: 30px 0;
+}
+/* end no posts alert msg */
+
+/* start post */
+.posts .post {
+    padding: 10px 0 0;
+    margin: 15px 0;
+    background-color: var(--postBg);
+    overflow: hidden;
+}
+
+    .posts .post .userImageContainer {
+        width: 20%;
+        float: left;
+    }
+
+.posts .userImageContainer .postUserImage {
+    min-height: 50px;
+    max-height: 50px;
+    min-width: 50px;
+    max-width: 50px;
+    display: block;
+    margin: auto;
+}
+
+@media (max-width: 767px) {
+    .posts .userImageContainer .postUserImage {
+        min-height: 35px;
+        max-height: 35px;
+        min-width: 35px;
+        max-width: 35px;
+    }
+}
+
+.posts .post .postDataAndActions {
+    width: 80%;
+    float: left;
+}
+
+    .posts .post .postDataAndActions .postData {
+        width: 75%;
+        float: left;
+    }
+
+        .posts .post .postDataAndActions .postData h5 {
+            margin: 0;
+        }
+
+            .posts .post .postDataAndActions .postData h5 a {
+                color: var(--linkColor);
+                text-transform: capitalize;
+                font-weight: bold;
+            }
+
+        .posts .post .postDataAndActions .postData h6 {
+            color: var(--fontColor2);
+        }
+
+@media (max-width: 767px) {
+    .posts .post .postDataAndActions .postData h5 {
+        font-size: 12px
+    }
+
+    .posts .post .postDataAndActions .postData h6 {
+        font-size: 10px;
+    }
+}
+
+.posts .post .postDataAndActions .postActions {
+    width: 25%;
+    float: left;
+    text-align: center
+}
+
+.posts .post .postActions i {
+    padding: 0 3px;
+}
+
+.posts .post p.postContent {
+    padding: 10px;
+    color: var(--fontColor);
+}
+
+@media (max-width: 767px) {
+    .posts .post p.postContent {
+        padding: 0 5px;
+    }
+}
+
+.posts .post .reactBox {
+    border-top: 2px solid var(--bgColor2);
+    border-bottom: 2px solid var(--bgColor2);
+    overflow: auto
+}
+
+    .posts .post .reactBox .reactBtn {
+        width: 33.33333%;
+        float: left;
+        padding: 4px;
+        cursor: pointer;
+        border-left: 1px solid var(--bgColor2);
+        border-right: 1px solid var(--bgColor2);
+        position: relative;
+    }
+
+        .posts .post .reactBox .reactBtn i {
+            padding: 0 5px;
+            font-size: 18px
+        }
+
+    .posts .post .reactBox .usersList {
+        position: absolute;
+        top: -115px;
+        left: 46px;
+        background: #00bfdf;
+        padding: 6px 6px;
+        text-align: left;
+        border-radius: 6px;
+    }
+
+        .posts .post .reactBox .usersList span {
+            display: block
+        }
+
+    .posts .post .reactBox .reactBtn.activeLike i {
+        color: var(--linkColor);
+    }
+
+    .posts .post .reactBox .reactBtn.activeLove i {
+        color: red
+    }
+/* end post */
+
+/* start comment */
+.posts .post .comments {
+    display: none;
+    padding: 10px;
+    border-bottom: 2px solid var(--bgColor2);
+}
+
+#noCommentsMsg {
+    display: none;
+}
+
+.noCommentsMsg {
+    background-color: #273048;
+    padding: 20px 5px 10px;
+    color: var(--fontColor2);
+    border-bottom: 2px solid red;
+}
+
+.posts .post .comment {
+    overflow: auto;
+    margin-bottom: 11px;
+}
+
+    .posts .post .comment .userImageContainer {
+        width: 10%;
+        float: left;
+    }
+
+    .posts .post .comment .commentData {
+        width: 90%;
+        float: left;
+    }
+
+@media (max-width: 767px) {
+    .posts .post .comment .userImageContainer {
+        width: 20%;
+        float: left;
+    }
+
+    .posts .post .comment .commentData {
+        width: 80%;
+        float: left;
+    }
+}
+
+.posts .post .commentUserImage {
+    min-height: 35px;
+    max-height: 35px;
+    min-width: 35px;
+    max-width: 35px;
+    display: block;
+    margin: auto
+}
+
+@media (max-width: 767px) {
+    .posts .post .commentUserImage {
+        min-height: 30px;
+        max-height: 30px;
+        min-width: 30px;
+        max-width: 30px;
+    }
+}
+
+.posts .post .comment .commentBody {
+    background-color: var(--bgColor2);
+    border-radius: 10px;
+    padding: 8px;
+}
+
+@media (max-width: 767px) {
+    .posts .post .comment .commentBody {
+        border-radius: 5px;
+        padding: 2px 5px;
+    }
+}
+
+.posts .post .comment p.commentContent {
+    margin: 0 5px;
+    display: inline
+}
+
+.posts .post .comment .commentBody span a {
+    color: var(--linkColor);
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.posts .post .comment .publishDate {
+    width: 80%;
+    float: left;
+}
+
+    .posts .post .comment .publishDate time {
+        color: var(--fontColor2);
+        font-size: 11px;
+    }
+
+.posts .post .comment .commentActions {
+    width: 20%;
+    float: left;
+    text-align: right;
+    min-height: 25px;
+}
+
+    .posts .post .comment .commentActions i {
+        padding: 3px;
+        font-size: 10px;
+    }
+
+@media (max-width: 767px) {
+    .posts .post .comment p.commentContent {
+        margin: 0 5px;
+        display: inline;
+        font-size: 10px
+    }
+
+    .posts .post .comment .commentBody span a {
+        font-size: 10px;
+    }
+
+    .posts .post .comment .publishDate time {
+        font-size: 8px;
+    }
+}
+/* end comment */
+
+/* end posts main page */
+
+
+
+/* start register and login */
+.register,
+.login,
+.editProfile,
+.changePassword,
+.changeProfilePic,
+.forgotPassword,
+.resetPassword {
+    background-color: var(--postBg);
+    padding: 20px 20px;
+    color: #eee;
+    border-radius: 8px;
+}
+
+    .register label,
+    .login label,
+    .editProfile label,
+    .changePassword label,
+    .changeProfilePic label,
+    .forgotPassword label,
+    .resetPassword label {
+        color: #eee;
+        margin-bottom: 10px;
+    }
+
+    .register p a,
+    .login p a,
+    .editProfile p a,
+    .changePassword p a,
+    .changeProfilePic p a,
+    .forgotPassword p a,
+    .resetPassword p a {
+        margin-top: 10px;
+        display: inline-block;
+        color: var(--linkColor);
+        font-size: 15px;
+    }
+
+
+
+.confirmEmail p,
+.forgotPasswordConfirmation p,
+.resetPasswordConfirmation p {
+    border: 2px solid #eee;
+    border-style: dashed;
+    padding: 20px 30px;
+    text-align: center;
+    margin: 30px 0;
+}
+
+.manageNav {
+    margin-bottom: 10px
+}
+
+    .manageNav a {
+        background-color: var(--bgColor2);
+        font-weight: bold;
+        font-size: 17px;
+        display: inline-block;
+        padding: 5px 10px;
+        margin: 5px 3px;
+        border-radius: 5px;
+    }
+/* end register and login */
+.account .userData {
+}
+
+    .account .userData img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+
+.account .aboutMe {
+}
+
+.account .followSection {
+    margin: 15px 0;
+}
+
+    .account .followSection .followBtn {
+        background-color: var(--fontColor2);
+        font-weight: bold;
+        transition: .8s ease;
+        width: 100%;
+    }
+
+.followersCount,
+.followingCount {
+    width: 30%;
+    float: left;
+    background-color: #343e58;
+    min-width: 50px;
+    font-size: 16px;
+    border-radius: 5px;
+    padding: 6px;
+    margin: 20px 0px 0;
+    font-weight: bold;
+    cursor: pointer
+}
+
+@media(max-width: 767px) {
+    .followersCount,
+    .followingCount {
+        width: 45%
+    }
+}
+
+.account .followSection .followBtn.active {
+    background-color: var(--mainColor);
+}
+
+.account .userStatistics {
+    border-top: 2px solid var(--mainColor);
+    border-bottom: 2px solid var(--mainColor);
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+    .account .userStatistics div {
+        width: 25%;
+        float: left;
+    }
+
+.followersAndfollowing {
+    overflow: auto;
+    width: 50%;
+    margin: auto;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: 10000;
+    background-color: rgba(0,0,0,.9);
+    display: none;
+}
+
+@media(max-width: 767px) {
+    .followersAndfollowing {
+        width: 100%
+    }
+}
+
+.followersAndfollowing .followContent {
+    padding: 10px 15px;
+}
+
+.followersAndfollowing .closeIcon {
+    display: inline-block;
+    padding: 0 21px;
+    font-size: 25px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    background-color: red;
+}
+
+.users {
+}
+
+.user {
+    background-color: var(--mainColor);
+    border-radius: 15px;
+    width: 90%;
+    margin: 0 auto 10px;
+    padding: 5px 0;
+}
+
+    .user div {
+        width: 70%;
+        float: left
+    }
+
+    .user .userImage {
+        width: 30%;
+        text-align: center
+    }
+
+        .user .userImage img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+
+    .user h4 {
+        font-weight: bold;
+        padding-top: 25px;
+    }
+
+        .user h4 a {
+            color: #fff;
+        }
+
+@media(max-width:767px) {
+    .user .userImage img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .user h4 {
+        padding-top: 0;
+    }
+}
+
+.users .intro,
+.searchResult .intro {
+    border-bottom: 1px dashed #ddd;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+    .users .intro h3,
+    .searchResult .intro h3 {
+        margin: 0;
+    }
+
+    .users .intro span,
+    .searchResult .intro span {
+        color: var(--fontColor);
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+/* start About  */
+.error h2 {
+    background-color: #b14646;
+    color: #fff;
+    margin: 0;
+    padding: 10px
+}
+
+.error p {
+    height: 150px;
+    line-height: 150px;
+    background-color: var(--mainColor);
+    padding: 0 10px;
+}
+
+
+
+
+.posts, .error, .about, .account, .users,
+.confirmEmail, .forgotPasswordConfirmation,
+.resetPasswordConfirmation {
+    padding: 10px 0
+}

@@ -1,0 +1,51 @@
+﻿@using Niqash.Resources
+
+@model Niqash.Models.ChangePasswordViewModel
+@{
+    ViewBag.Title = ViewsResource.changeProfilePic;
+}
+
+@Html.Partial("_ManageNav")
+
+<div class="changeProfilePic">
+
+    <div class="intro text-center">
+        <p class="lead">@ViewsResource.changeProfilePic</p>
+
+        <div class="succesMsg customHide">
+            <div class="alert alert-success">
+                <p>
+                    <strong>@ViewsResource.success</strong>
+                    @ViewsResource.successChangeProfilePicMsg
+                </p>
+            </div>
+        </div>
+        <div class="erorrMsg customHide">
+            <div class="alert alert-danger">
+                <p>
+                    <strong>@ViewsResource.erorr</strong>
+                    @ViewsResource.erorrMsg
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <form action="/Manage/ChangeProfilePic" method="post" id="ChangeProfilePicForm" enctype="multipart/form-data">
+
+        <div class="form-group">
+            <label for="profilePic">Profie Picture</label>
+            <input type="file" name="profilePicture" id="profilePic" class="siteInput"/>
+        </div>
+
+        <div class="form-group text-center">
+            @Html.AntiForgeryToken()
+            <input type="submit" class="siteBtn" value="@ViewsResource.changeProfilePic" />
+        </div>
+
+    </form>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

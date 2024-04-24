@@ -1,0 +1,137 @@
+﻿@using Niqash.Resources
+@using Microsoft.AspNet.Identity;
+@model Niqash.ViewModels.PostsVm
+
+
+<h2 id="userId" class="hidden">@User.Identity.GetUserId()</h2>
+
+<!-- posts -->
+<form action="/Posts/CreatePost" method="post" id="postForm">
+    <div class="form-group">
+        @Html.TextAreaFor(m => m.NewPost.Content, 5, 5, new { @class = "form-control siteInput", placeholder = ViewsResource.newPostPlaceholder + " ......." })
+        @Html.ValidationMessageFor(m => m.NewPost.Content)
+    </div>
+    <div class="form-group overflow">
+        @Html.AntiForgeryToken()
+        <input type="submit" value="@ViewsResource.share" class="siteBtn pull-right" />
+    </div>
+</form>
+
+<div class="alert alert-info customHide" id="noPostsMsg">
+    <p class="lead text-center">
+        @ViewsResource.noPostsMsg.
+    </p>
+</div>
+
+<!-- comments -->
+<form action="/Comments/CreateComment" method="post" id="commentForm" class="hidden">
+    <div class="form-group">
+        @Html.TextAreaFor(m => m.NewComment.Content, 2, 5, new { @class = "form-control siteInput", placeholder = ViewsResource.newCommentPlaceholder + " ......." })
+        @Html.ValidationMessageFor(m => m.NewComment.Content)
+    </div>
+    <div class="form-group">
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m => m.NewComment.PostId)
+    </div>
+</form>
+
+<div class="noCommentsMsg" id="noCommentsMsg">
+    <p class="text-center">
+        @ViewsResource.noCommentsMsg.
+    </p>
+</div>
+
+<!-- edit post Modal -->
+<div class="modal fade" id="editPostModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <form action="/posts/updatePost" method="post" id="confirmPostUpdate">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">@ViewsResource.updatePost</h4>
+                </div>
+
+                <div class="modal-body">
+                    @Html.TextAreaFor(m => m.NewPost.Content, 5, 5, new { @class = "form-control siteInput", placeholder = ViewsResource.newPostPlaceholder + " ......." })
+                    @Html.ValidationMessageFor(m => m.NewPost.Content)
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="closeBtn siteBtn" data-dismiss="modal">@ViewsResource.close</button>
+                    <button type="submit" class="siteBtn confirmPostUpdateBtn" id="">@ViewsResource.save</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- remove post Modal -->
+<div class="modal fade" id="removePostModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title remove" id="myModalLabel">@ViewsResource.warningMsg</h4>
+            </div>
+            <div class="modal-body">
+                @ViewsResource.removePostWarningMsg
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="closeBtn siteBtn" data-dismiss="modal">@ViewsResource.close</button>
+                <button type="button" class="btn-danger siteBtn" id="confirmRemovePost">@ViewsResource.remove</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- edit comment Modal -->
+<div class="modal fade" id="editCommentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+
+            <form action="/comments/updateComment" method="post" id="confirmCommentUpdate">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">@ViewsResource.updateComment</h4>
+                </div>
+
+                <div class="modal-body">
+                    @Html.TextAreaFor(m => m.NewComment.Content, 5, 5, new { @class = "form-control siteInput", placeholder = ViewsResource.newPostPlaceholder + " ......." })
+                    @Html.ValidationMessageFor(m => m.NewComment.Content)
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="closeBtn siteBtn" data-dismiss="modal">@ViewsResource.close</button>
+                    <button type="submit" class="siteBtn confirmCommentUpdateBtn" id="">@ViewsResource.save</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<!-- remove comment Modal -->
+<div class="modal fade" id="removeCommentModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title remove" id="myModalLabel">@ViewsResource.warningMsg</h4>
+            </div>
+            <div class="modal-body">
+                @ViewsResource.removeCommentWarningMsg
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="closeBtn siteBtn" data-dismiss="modal">@ViewsResource.close</button>
+                <button type="button" class="siteBtn" id="confirmRemoveComment">@ViewsResource.remove</button>
+            </div>
+        </div>
+    </div>
+</div>
+

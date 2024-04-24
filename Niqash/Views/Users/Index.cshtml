@@ -1,0 +1,31 @@
+﻿@using Niqash.Resources
+
+@model IEnumerable<Niqash.Models.ApplicationUser>
+@{
+    ViewBag.Title = ViewsResource.users;
+}
+
+
+<div class="users">
+
+    <div class="intro">
+        <h3>@ViewsResource.allUsers</h3>
+        <span>@Model.Count() @ViewsResource.user</span>
+    </div>
+
+    @foreach (var user in Model)
+    {
+        <div class="user overflow">
+            <div class="userImage">
+                <img src="@user.ProfilePicSrc" alt="@user.FirstName">
+            </div>
+            <div class="userName">
+                <h4>
+                    <a href="/users/account/@user.Id">@user.FirstName @user.LastName</a>
+                </h4>
+            </div>
+        </div>
+    }
+
+</div>
+

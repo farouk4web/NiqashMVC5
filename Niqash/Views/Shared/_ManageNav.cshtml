@@ -1,0 +1,13 @@
+﻿@using Niqash.Resources
+
+<div class="manageNav text-center" data-manage="true">
+    <a href="/manage/editProfile">@ViewsResource.editProfile</a>
+    <a href="/manage/changeProfilePic">@ViewsResource.changeProfilePic</a>
+    <a href="/manage/changePassword">@ViewsResource.changePassword</a>
+</div>
+
+<div class="emailConfirmationState customHide">
+    <div class="alert alert-warning">
+        <p data-confirmEmailMsg="@ViewsResource.shouldConfirmEmailMsg"></p>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+﻿@using Niqash.Resources
+
+@model Niqash.Models.LoginViewModel
+@{
+    ViewBag.Title = ViewsResource.login;
+}
+
+<div class="login">
+    <div class="intro text-center">
+
+        @*<div id="socialLoginForm">
+                <h3>log in with...</h3>
+                @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+            </div>*@
+
+        <p class="lead">@ViewsResource.loginMsg</p>
+    </div>
+
+    @using (Html.BeginForm("Login", "Account", new { ReturnUrl = ViewBag.ReturnUrl }, FormMethod.Post))
+    {
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Email, new { @class = "control-label" })
+            @Html.TextBoxFor(m => m.Email, new { @class = "form-control siteInput" })
+            @Html.ValidationMessageFor(m => m.Email)
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Password, new { @class = "control-label" })
+            @Html.PasswordFor(m => m.Password, new { @class = "form-control siteInput" })
+            @Html.ValidationMessageFor(m => m.Password)
+        </div>
+
+        <div class="form-group overflow">
+            <div class="checkbox pull-left">
+                <label>
+                    @Html.CheckBoxFor(m => m.RememberMe) @ViewsResource.rememberMe
+                </label>
+            </div>
+            <div class="pull-right">
+                <p>
+                    @Html.ActionLink(ViewsResource.forgotPassword , "ForgotPassword")
+                </p>
+            </div>
+        </div>
+        <div class="form-group text-center">
+            @Html.AntiForgeryToken()
+            <input type="submit" class="siteBtn" value="@ViewsResource.login" />
+        </div>
+
+        <p>
+            @ViewsResource.haveNoAccountMsg
+            @Html.ActionLink(ViewsResource.getStarted, "Register")
+        </p>
+    }
+
+</div>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

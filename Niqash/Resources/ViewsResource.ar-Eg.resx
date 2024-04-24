@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="about" xml:space="preserve">
+    <value>من نحن</value>
+  </data>
+  <data name="aboutMePlaceholder" xml:space="preserve">
+    <value>اكتب شيئآ عن نفسك ...........</value>
+  </data>
+  <data name="aboutSitePargraph" xml:space="preserve">
+    <value>نقاش شبكة إجتماعية لمشاركة ومناقشة اي موضوع في اي وقت مع مجتمع كبير من كل انحاء العالم.</value>
+  </data>
+  <data name="allUsers" xml:space="preserve">
+    <value>كل المستخدمين</value>
+  </data>
+  <data name="appName" xml:space="preserve">
+    <value>نقاش</value>
+  </data>
+  <data name="changePassword" xml:space="preserve">
+    <value>تغيير كلمة المرور</value>
+  </data>
+  <data name="changeProfilePic" xml:space="preserve">
+    <value>تغيير الصورة الشخصية</value>
+  </data>
+  <data name="close" xml:space="preserve">
+    <value>إغلاق</value>
+  </data>
+  <data name="comment" xml:space="preserve">
+    <value>تعليق</value>
+  </data>
+  <data name="confirmEmail" xml:space="preserve">
+    <value>تأكيد البريد الإليكتروني</value>
+  </data>
+  <data name="confirmEmailMsg" xml:space="preserve">
+    <value>شكرآ لك علي تأكيد البريد الإليكتروني . رجاءآ</value>
+  </data>
+  <data name="contact" xml:space="preserve">
+    <value>تواصل معنا</value>
+  </data>
+  <data name="editProfile" xml:space="preserve">
+    <value>تحديث الحساب</value>
+  </data>
+  <data name="editProfileIntro" xml:space="preserve">
+    <value>حدث حسابك</value>
+  </data>
+  <data name="erorr" xml:space="preserve">
+    <value>خطأ</value>
+  </data>
+  <data name="erorrMsg" xml:space="preserve">
+    <value>هناك خطأ حاول مرة اخري رجاءآ</value>
+  </data>
+  <data name="follow" xml:space="preserve">
+    <value>تابع</value>
+  </data>
+  <data name="followers" xml:space="preserve">
+    <value>المتابعين</value>
+  </data>
+  <data name="following" xml:space="preserve">
+    <value>يتابع</value>
+  </data>
+  <data name="forgotPassword" xml:space="preserve">
+    <value>نسيت كلمة المرور؟</value>
+  </data>
+  <data name="forgotPasswordConfirmation" xml:space="preserve">
+    <value>تأكيد نسيان كلمة المرور</value>
+  </data>
+  <data name="forgotPasswordConfirmationMsg" xml:space="preserve">
+    <value>لقد ارسلنا رابط إعادة تعيين كلمة مرور حسابك إلي بريدك الإليكتروني رجاءآ تفحص البريد الوارد</value>
+  </data>
+  <data name="getStarted" xml:space="preserve">
+    <value>إبدأ</value>
+  </data>
+  <data name="global" xml:space="preserve">
+    <value>عالمي</value>
+  </data>
+  <data name="haveAccountMsg" xml:space="preserve">
+    <value>بالطبع لدي حساب</value>
+  </data>
+  <data name="haveNoAccountMsg" xml:space="preserve">
+    <value>لا تملك حساب؟</value>
+  </data>
+  <data name="home" xml:space="preserve">
+    <value>الرئيسية</value>
+  </data>
+  <data name="login" xml:space="preserve">
+    <value>تسجيل الدخول</value>
+  </data>
+  <data name="loginErorrMsg" xml:space="preserve">
+    <value>خطأ في البريد الإليكتروني او كلمة السر, رجاءآ حاول مرة اخري</value>
+  </data>
+  <data name="loginMsg" xml:space="preserve">
+    <value>سجل بواسطة البريد الإليكتروني</value>
+  </data>
+  <data name="loginOut" xml:space="preserve">
+    <value>تسجيل الخروج</value>
+  </data>
+  <data name="myAccount" xml:space="preserve">
+    <value>حسابي</value>
+  </data>
+  <data name="newAccountMsg" xml:space="preserve">
+    <value>أنشئ حساب جديد</value>
+  </data>
+  <data name="newCommentPlaceholder" xml:space="preserve">
+    <value>اضف تعليق مفيد</value>
+  </data>
+  <data name="newPostPlaceholder" xml:space="preserve">
+    <value>شارك شئ مفيد</value>
+  </data>
+  <data name="noCommentsMsg" xml:space="preserve">
+    <value>عذرآ, لم نجد اي تعليق يخص هذا المنشور , حاول إضافة تعليق</value>
+  </data>
+  <data name="nofollowersMsg" xml:space="preserve">
+    <value>لا يوجد احد يتابع هذا المستخدم حتي الأن</value>
+  </data>
+  <data name="nofollowingMsg" xml:space="preserve">
+    <value>هذا المستخدم لا يتابع اي مستخدم</value>
+  </data>
+  <data name="noPostsMsg" xml:space="preserve">
+    <value>عذرآ, لم نجد اي منشور يخصك او يخص ايآ ممن تتابعهم, حاول إضافة منشور جديد</value>
+  </data>
+  <data name="post" xml:space="preserve">
+    <value>منشور</value>
+  </data>
+  <data name="posts" xml:space="preserve">
+    <value>منشورات</value>
+  </data>
+  <data name="react" xml:space="preserve">
+    <value>تفاعل</value>
+  </data>
+  <data name="register" xml:space="preserve">
+    <value>تسجيل جديد</value>
+  </data>
+  <data name="rememberMe" xml:space="preserve">
+    <value>تزكرني</value>
+  </data>
+  <data name="remove" xml:space="preserve">
+    <value>حذف</value>
+  </data>
+  <data name="removeCommentWarningMsg" xml:space="preserve">
+    <value>هل انت متأكد من رغبتك بحذف هذا التعليق</value>
+  </data>
+  <data name="removePostWarningMsg" xml:space="preserve">
+    <value>هل انت متأكد من رغبتك بحذف هذا المنشور</value>
+  </data>
+  <data name="resetPassword" xml:space="preserve">
+    <value>إعادة تعيين كلمة المرور</value>
+  </data>
+  <data name="resetPasswordConfirmation" xml:space="preserve">
+    <value>تأكيد إعادة تعيين كلمة المرور</value>
+  </data>
+  <data name="resetPasswordConfirmationMsg" xml:space="preserve">
+    <value>تم إعادة تعيين كلمة مرورك, رجاءآ</value>
+  </data>
+  <data name="resetPasswordMsg" xml:space="preserve">
+    <value>إعادة تعيين كلمة المرور حسابك</value>
+  </data>
+  <data name="save" xml:space="preserve">
+    <value>حفظ</value>
+  </data>
+  <data name="search" xml:space="preserve">
+    <value>بحث</value>
+  </data>
+  <data name="searchResult" xml:space="preserve">
+    <value>نتيجة البحث</value>
+  </data>
+  <data name="searchValidation" xml:space="preserve">
+    <value>عذرآ يجب ان تكتب حرف واحد علي الاقل</value>
+  </data>
+  <data name="sendEmail" xml:space="preserve">
+    <value>ارسال بريد إليكتروني</value>
+  </data>
+  <data name="settings" xml:space="preserve">
+    <value>الإعدادت</value>
+  </data>
+  <data name="shouldConfirmEmailMsg" xml:space="preserve">
+    <value>عليك تأكيد بريدك الإليكتروني, لتكون قادر علي إعادة تعيين كلمة مرور حسابك</value>
+  </data>
+  <data name="siteStatisticsHeading" xml:space="preserve">
+    <value>لدينا.....</value>
+  </data>
+  <data name="success" xml:space="preserve">
+    <value>نجح!</value>
+  </data>
+  <data name="successChangePasswordMsg" xml:space="preserve">
+    <value>كلمة مرور حسابك تم تغييرها</value>
+  </data>
+  <data name="successChangeProfilePicMsg" xml:space="preserve">
+    <value>صورة حسابك الشخصية تم تحديثها بنجاح</value>
+  </data>
+  <data name="successEditProfileMsg" xml:space="preserve">
+    <value>تم تحديث حسابك</value>
+  </data>
+  <data name="unFollow" xml:space="preserve">
+    <value>إلغاء المتابعة</value>
+  </data>
+  <data name="updateComment" xml:space="preserve">
+    <value>تحديث التعليق</value>
+  </data>
+  <data name="updatePost" xml:space="preserve">
+    <value>تحديث المنشور</value>
+  </data>
+  <data name="user" xml:space="preserve">
+    <value>مستخدم</value>
+  </data>
+  <data name="users" xml:space="preserve">
+    <value>المستخدمين</value>
+  </data>
+  <data name="warningMsg" xml:space="preserve">
+    <value>رسالة تحذير</value>
+  </data>
+  <data name="share" xml:space="preserve">
+    <value>شارك</value>
+  </data>
+  <data name="like" xml:space="preserve">
+    <value>أعجبني</value>
+  </data>
+  <data name="love" xml:space="preserve">
+    <value>أحببته</value>
+  </data>
+  <data name="noSearchResult" xml:space="preserve">
+    <value>عذرا لم نجد تطابق مع اي حساب رجاءآ قم بالمحاولة مرة اخري</value>
+  </data>
+  <data name="adDescription" xml:space="preserve">
+    <value>يمكنك إضافة إعلانك هنا انت تحتاج ان تتواصل معنا فقط</value>
+  </data>
+</root>

@@ -1,0 +1,85 @@
+﻿body{
+    direction: rtl;
+}
+
+.navbar {
+    border-bottom: 1px solid var(--mainColor);
+}
+
+a.navbar-toggle {
+    margin-left: 15px;
+    margin-right: 90px;
+}
+
+.posts .post .userImageContainer {
+    float: right;
+}
+
+.posts .post .postDataAndActions {
+    float: right;
+}
+
+    .posts .post .postDataAndActions .postData {
+        float: right;
+    }
+
+    .posts .post .postDataAndActions .postActions {
+        float: right;
+    }
+
+.posts .post .reactBox .reactBtn {
+    float: right;
+}
+
+.posts .post .reactBox .usersList {
+    right: 46px;
+}
+/* end post */
+
+/* start comment */
+
+.posts .post .comment .userImageContainer {
+    float: right;
+}
+
+.posts .post .comment .commentData {
+    float: right;
+}
+
+@media (max-width: 767px) {
+    .posts .post .comment .userImageContainer {
+        float: right;
+    }
+
+    .posts .post .comment .commentData {
+        float: right;
+    }
+}
+
+.posts .post .comment .publishDate {
+    float: right;
+}
+
+.posts .post .comment .commentActions {
+    float: right;
+}
+
+.followersCount,
+.followingCount {
+    float: right;
+}
+
+@media(max-width: 767px) {
+    .followersCount,
+    .followingCount {
+        width: 45%
+    }
+}
+
+.account .userStatistics div {
+    float: right
+}
+
+.user div {
+    float: right
+}

@@ -1,0 +1,28 @@
+﻿@using Niqash.Resources
+@using Microsoft.AspNet.Identity
+@if (Request.IsAuthenticated)
+{
+    <li>
+        <a href="javascript:document.getElementById('logoutForm').submit()" title="@ViewsResource.loginOut">
+            <i class="glyphicon glyphicon-log-out"></i>
+        </a>
+    </li>
+
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "hidden" }))
+    {
+        @Html.AntiForgeryToken()
+    }
+}
+else
+{
+        <li>
+            <a href="/account/register" id="registerLink">
+                @ViewsResource.register <i class="glyphicon glyphicon-user"></i>
+            </a>
+        </li>
+        <li>
+            <a href="/account/login" id="loginLink">
+                @ViewsResource.login <i class="glyphicon glyphicon-log-in"></i>
+            </a>
+        </li>
+}
